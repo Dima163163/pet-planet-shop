@@ -8,13 +8,25 @@
 	&__header {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		align-items: center;
 		margin-bottom: 40px;
+
+		@include mobile {
+			justify-content: end;
+			gap: 30px;
+		}
 	}
 
 	&__categories {
 		display: flex;
+		overflow-x: auto;
 		gap: 28px;
+
+		@include mobile {
+			flex-grow: 1;
+			gap: 16px;
+		}
 	}
 
 	&__category-button {
@@ -57,6 +69,10 @@
 		font-size: 12px;
 		line-height: 1;
 		color: $light;
+
+		@include bigscreen {
+			vertical-align: middle;
+		}
 	}
 
 	&__cart-icon {
@@ -85,5 +101,6 @@
 
 	&__item {
 		display: flex;
+		justify-self: center;
 	}
 }
