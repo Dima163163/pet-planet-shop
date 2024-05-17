@@ -129,8 +129,38 @@
 	<div class="modal-overlay">
 		<div class="modal">
 			<div class="modal__content">
-				<h2 class="">Корзина</h2>
-				<ul class="modal__cart-items"></ul>
+				<h2 class="modal__title">Корзина</h2>
+				<ul class="modal__cart-items">
+					<li class="modal__cart-item">
+						<img class="modal__cart-item-image" src="img/1.jpg" alt="">
+						<h3 class="modal__cart-item-title">Название товара</h3>
+						<div class="modal__cart-item-count">
+							<button class="modal__btn modal__minus">-</button>
+							<span class="modal__count">1</span>
+							<button class="modal__btn modal__plus">+</button>
+						</div>
+
+						<p class="modal__cart-item-price">5000&nbsp;₽</p>
+					</li>
+				</ul>
+				<form class="modal__cart-form">
+					<fieldset class="modal__cart-fieldset">
+						<legend class="modal__cart-legend">Самовывоз из магазина:</legend>
+						<label class="modal__radio radio" for="1">ул. Адамавая 45/1
+							<input class="radio__inpit" type="radio" name="store" value="1" checked>
+						</label>
+						<label class="modal__radio radio" for="2">ул. Вишневая 74
+							<input class="radio__inpit" type="radio" name="store" value="2">
+						</label>
+						<label class="modal__radio radio" for="3">ул. Чехова 106/28
+							<input class="radio__inpit" type="radio" name="store" value="3">
+						</label>
+					</fieldset>
+					<div class="modal__cart-footer">
+						<button class="modal__cart-button">Заказать</button>
+						<p class="modal__cart-price">0&nbsp;₽</p>
+					</div>
+				</form>
 			</div>
 		</div>
 		<button class="modal-overlay__close-button">&times;</button>

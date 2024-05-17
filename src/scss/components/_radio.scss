@@ -1,0 +1,42 @@
+@use '../variables' as *;
+@use '../media' as *;
+
+.radio {
+	position: relative;
+	display: block;
+	padding-right: 16px;
+
+	&__inpit {
+		position: absolute;
+		appearance: none;
+		top: 50%;
+		transform: translateY(-50);
+		width: 12px;
+		height: 12px;
+		right: 0;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			display: block;
+			border: 1px solid $green;
+			background-color: transparent;
+			border-radius: 50%;
+		}
+
+		&:checked::before {
+			background-color: $green;
+		}
+
+		&:focus-visible {
+			outline: 1px solid $green;
+		}
+
+		&:hover {
+			background-color: $carrot;
+		}
+	}
+}
